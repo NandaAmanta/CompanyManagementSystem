@@ -14,19 +14,17 @@ Route::group(['middleware' => ['auth', 'verified', CheckAuthUserGRTechEmail::cla
     });
     
     Route::prefix('companies')->group(function () {
-        Route::get('/', [\App\Http\Controllers\Management\CompanyController::class, 'index'])->name('companies.index');
-        Route::get('/{id}', [\App\Http\Controllers\Management\CompanyController::class, 'show'])->name('companies.show');
-        Route::post('/', [\App\Http\Controllers\Management\CompanyController::class, 'store'])->name('companies.store');
-        Route::put('/{id}', [\App\Http\Controllers\Management\CompanyController::class, 'update'])->name('companies.update');
-        Route::delete('/{id}', [\App\Http\Controllers\Management\CompanyController::class, 'destroy'])->name('companies.destroy');
+        Route::get('/', [\App\Http\Controllers\Company\CompanyController::class, 'index'])->name('company');
+        Route::post('/', [\App\Http\Controllers\Company\CompanyController::class, 'store'])->name('company.store');
+        Route::put('/{id}', [\App\Http\Controllers\Company\CompanyController::class, 'update'])->name('company.update');
+        Route::delete('/{id}', [\App\Http\Controllers\Company\CompanyController::class, 'destroy'])->name('company.destroy');
     });
 
     Route::prefix('employees')->group(function () {
-        Route::get('/', [\App\Http\Controllers\Management\EmployeeController::class, 'index'])->name('employees.index');
-        Route::get('/{id}', [\App\Http\Controllers\Management\EmployeeController::class, 'show'])->name('employees.show');
-        Route::post('/', [\App\Http\Controllers\Management\EmployeeController::class, 'store'])->name('employees.store');
-        Route::put('/{id}', [\App\Http\Controllers\Management\EmployeeController::class, 'update'])->name('employees.update');
-        Route::delete('/{id}', [\App\Http\Controllers\Management\EmployeeController::class, 'destroy'])->name('employees.destroy');
+        Route::get('/', [\App\Http\Controllers\Employee\EmployeeController::class, 'index'])->name('employee');
+        Route::post('/', [\App\Http\Controllers\Employee\EmployeeController::class, 'store'])->name('employee.store');
+        Route::put('/{id}', [\App\Http\Controllers\Employee\EmployeeController::class, 'update'])->name('employee.update');
+        Route::delete('/{id}', [\App\Http\Controllers\Employee\EmployeeController::class, 'destroy'])->name('employee.destroy');
     });
 });
 require __DIR__ . '/settings.php';

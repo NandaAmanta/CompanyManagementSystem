@@ -11,7 +11,13 @@ class Employee extends Model
         'first_name',
         'last_name',
         'email',
-        'phone_number'
+        'phone_number',
+        'company_id'
+    ];
+
+    protected $casts = [
+        'created_at' => 'datetime:H:i d M Y',
+        'updated_at' => 'datetime:H:i d M Y',
     ];
 
     public function company() : BelongsTo
