@@ -2,9 +2,11 @@
 
 namespace App\Http\Services;
 
+use App\Mail\NewEmployeeNotificationMail;
 use App\Models\Employee;
 use App\Traits\CanCRUDUsingRepository;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Mail;
 
 class EmployeeService
 {
@@ -25,4 +27,12 @@ class EmployeeService
             });
         return $this->repository->paginate($filters, $query, ['company']);
     }
+
+    public function create(array $data)
+    {
+        $data = $this->repository->create($data);
+        Mail::to($data->company->email)->queue(new NewEmployeeNotificationMail($data));
+        return $data;
+    }
+
 }
