@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services;
+namespace App\Services;
 
 use App\Models\Company;
 use App\Traits\CanCRUDUsingRepository;
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Storage;
 class CompanyService
 {
     use CanCRUDUsingRepository;
-    public function __construct(private \App\Http\Repositories\CompanyRepository $repository){}
+    public function __construct(private \App\Repositories\CompanyRepository $repository){}
 
     public function create(array $data)
     {

@@ -18,6 +18,7 @@ class EmployeeUpdateRequest extends FormRequest
             'last_name' => ['required', 'string', 'max:255'],
             'email' => ['nullable','string','lowercase','email'],
             'phone_number' => ['nullable', 'string', 'max:255'],
+            'company_id' => ['required', 'exists:companies,id'],
         ];
     }
 }

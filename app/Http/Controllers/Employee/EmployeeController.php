@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Employee;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Employee\EmployeeCreationRequest;
 use App\Http\Requests\Employee\EmployeeUpdateRequest;
-use App\Http\Services\EmployeeService;
+use App\Services\EmployeeService;
 use App\Models\Company;
 use Illuminate\Http\Request;
 use Inertia\Inertia;

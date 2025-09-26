@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Services;
+namespace App\Services;
 
 use App\Mail\NewEmployeeNotificationMail;
 use App\Models\Employee;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 class EmployeeService
 {
     use CanCRUDUsingRepository;
-    public function __construct(private \App\Http\Repositories\EmployeeRepository $repository){}
+    public function __construct(private \App\Repositories\EmployeeRepository $repository){}
 
     public function paginate(array $filters = []) : LengthAwarePaginator
     {

@@ -6,7 +6,7 @@ namespace App\Http\Controllers\Company;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Company\CompanyCreationRequest;
 use App\Http\Requests\Company\CompanyUpdateRequest;
-use App\Http\Services\CompanyService;
+use App\Services\CompanyService;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 

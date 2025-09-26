@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Repositories\Implemetations;
+namespace App\Repositories\Implemetations;
 
-use App\Http\Repositories\CompanyRepository;
+use App\Repositories\CompanyRepository;
 use App\Models\Company;
 
 class CompanyRepositoryImpl extends BaseRepositoryImpl implements CompanyRepository

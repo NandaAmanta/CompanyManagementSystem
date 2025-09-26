@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Repositories\Implemetations;
+namespace App\Repositories\Implemetations;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Http\Repositories\BaseRepository;
+use App\Repositories\BaseRepository;
 
 abstract class BaseRepositoryImpl implements BaseRepository
 {

@@ -2,10 +2,10 @@
 
 namespace App\Providers;
 
-use App\Http\Repositories\CompanyRepository;
-use App\Http\Repositories\EmployeeRepository;
-use App\Http\Repositories\Implemetations\CompanyRepositoryImpl;
-use App\Http\Repositories\Implemetations\EmployeeRepositoryImpl;
+use App\Repositories\CompanyRepository;
+use App\Repositories\EmployeeRepository;
+use App\Repositories\Implemetations\CompanyRepositoryImpl;
+use App\Repositories\Implemetations\EmployeeRepositoryImpl;
 use Illuminate\Support\ServiceProvider;
 
 class RepositoryRegistrationServiceProvider extends ServiceProvider
